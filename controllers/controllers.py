@@ -16,7 +16,7 @@ class MyModule(http.Controller):
             url = 'api_url_here?SessionID='+session_id
             response = requests.get(url)
             response_data = response.json()
-
+            print()
             return http.Response(
                     json.dumps(response_data),
                     content_type='application/json',
