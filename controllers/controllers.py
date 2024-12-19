@@ -14,7 +14,7 @@ class MyModule(http.Controller):
     def add(self, **kw):
         try:
             session_id = http.request.httprequest.cookies.get('session_id')
-            url = f'https://2550-66-9-176-235.ngrok-free.app/agent-query?query=Buscar producto con ID 22&session_id={session_id}'
+            url = f'https://8153-66-9-176-235.ngrok-free.app/agent-query?query=Buscar producto con ID 22&session_id={session_id}'
 
             response = requests.get(url)
 
