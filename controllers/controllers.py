@@ -15,7 +15,10 @@ class MyModule(http.Controller):
         try:
             session_id = http.request.httprequest.cookies.get('session_id')
             uid = http.request.session.uid
-            url = f'https://a39f-66-9-176-125.ngrok-free.app/agent-query?query=Buscar producto con ID 2&session_id={session_id}&uid={uid}'
+
+            base_url = http.request.env['ir.config_parameter'].sudo().get_param('web.base.url')
+
+            url = f'https://8375-66-9-176-125.ngrok-free.app/agent-query?query=Buscar producto con ID 1923&session_id={session_id}&uid={uid}&url={base_url}'
 
             response = requests.get(url)
 
