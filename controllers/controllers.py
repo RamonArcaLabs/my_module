@@ -30,7 +30,7 @@ class MyModule(http.Controller):
             uid = http.request.session.uid
             base_url = http.request.env['ir.config_parameter'].sudo().get_param('web.base.url')
 
-            api_url = f'http://host.docker.internal:5000/agent-query?query={query}&session_id={session_id}&uid={uid}&url={base_url}'
+            url = f'https://8375-66-9-176-125.ngrok-free.app/agent-query?query=Buscar producto con ID 1923&session_id={session_id}&uid={uid}&url={base_url}'
 
             response = requests.get(api_url)
 
